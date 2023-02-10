@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.graph_objs as go
+import plotly.express as px
 
 # Use this file to read in your data and prepare the plotly visualizations. The path to the data files are in
 # `data/file_name.csv`
@@ -14,22 +15,32 @@ def return_figures():
         list (dict): list containing the four plotly visualizations
 
     """
+    df = pd.read_csv('data/2019.csv')
 
-    # first chart plots arable land from 1990 to 2015 in top 10 economies 
-    # as a line chart
+    # first chart plots Score against Life Expectancy
+    graph_one = []
     
-    graph_one = []    
+    
     graph_one.append(
       go.Scatter(
-      x = [0, 1, 2, 3, 4, 5],
-      y = [0, 2, 4, 6, 8, 10],
-      mode = 'lines'
+      x = df['Score'],
+      y = df['Healthy life expectancy'],
+      mode = 'markers'
       )
     )
-
-    layout_one = dict(title = 'Chart One',
-                xaxis = dict(title = 'x-axis label'),
-                yaxis = dict(title = 'y-axis label'),
+    
+    """
+    graph_one.append(
+      px.scatter(
+      x = df['Score'],
+      y = df['Healthy life expectancy'],
+      )
+    )
+    """
+    
+    layout_one = dict(title = 'Happiness vs. Healthy Life Expectancy',
+                xaxis = dict(title = 'Happiness Score'),
+                yaxis = dict(title = 'Healthy Life Expectancy'),
                 )
 
 # second chart plots ararble land for 2015 as a bar chart    

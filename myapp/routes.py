@@ -1,12 +1,14 @@
 from myapp import app
 import json, plotly
+from plotly import utils
+from json import dumps
 from flask import render_template
 from wrangling_scripts.wrangle_data import return_figures
 
 @app.route('/')
 @app.route('/index')
 def index():
-
+    
     figures = return_figures()
 
     # plot ids for the html id tag
