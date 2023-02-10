@@ -1,7 +1,5 @@
 from myapp import app
 import json, plotly
-from plotly import utils
-from json import dumps
 from flask import render_template
 from wrangling_scripts.wrangle_data import return_figures
 
