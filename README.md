@@ -20,6 +20,7 @@ the Udacity environment. Both upload pathways will be detailed.
 - [Ubunto (Linux) Approach](#ubunto-linux)
 - [Micrsoft Git Bash Approach](#microsoft-git-bash)
 - [Ready to Upload](#ready-to-upload)
+- [Notes on the Transformation](#notes-on-the-transformation)
 - [Future Considerations](#future-considerations)
 
 
@@ -184,7 +185,7 @@ heroku login -i
 
 6. Change Directory Into The **web_app** Folder
 ```
-cd \...\web_app
+cd ...\...\web_app
 ```
 
 7. Create a **Procfile** Within the **web_app** folder (product presentation compact file)
@@ -239,10 +240,110 @@ git push heroku master
 
 
 ## Microsoft Git Bash Approach
+This version roughly follows the Ubunto approach, but uses slightly different commands.
+
+1. Create Virtual Environment
+```
+conda create --name environment_name python --no-default-packages
+source activate environment_name
+```
+
+2. Install necessary libraries
+```
+pip3 install flask pandas plotly gunicorn
+```
+
+3. (If not already signed into Heroku) Install Heroku
+```
+curl https://cli-assets.heroku.com/install-ubuntu.sh  |  sh 
+```
+
+4. Login to Heroku
+```
+winpty heroku.cmd login
+```
+
+5. Change directory into **web_app**
+```
+cd ...\...\web_app
+```
+
+6. Create **Procfile**
+```
+touch Procfile
+```
+
+7. Alter the **Procfile**
+```python
+web gunicorn myapp:app
+```
+
+8. Create **requirements.txt** file
+```
+pip list --format=freeze > requirements.txt
+```
+
+9. Initialize Git environment
+```
+git init
+git add .
+git commit
+```
+
+10. Initialize Heroku application
+```
+heroku create my-app-name
+```
+
+11. Apply configurations
+```
+heroku config:set SLUGIFY_USES_TEXT_UNIDECODE=yes
+heroku config:set AIRFLOW_GPL_UNIDECODE=yes
+heroku config
+```
+
+12. Push Heroku application
+```
+git push heroku master
+```
 
 
+[Table of Contents](#table-of-contents)
 
+
+## Notes on the Transformation
+Quite the before and after! What exactly changed:
+- Removed **run_app()** from **myapp.py** file
+- Added **Procfile**
+- Added **requirements.txt** file
+- In the case of the Microsoft Git Bash approach, added **runtime.txt** file
+
+When using Microsoft Git Bash, the user may need to login to Heroku once 
+in the Windows Command Prompt if the terminal is suggesting Heroku is not installed.
+Hence, when checking:
+```
+heroku -version
+```
+
+Due to the nature of the uploaded server requiring a unique name (remember back to 
+**my-app-name**), it may seem permanent if a mistake is made along the way. However,
+don't fret. To delete an app:
+```
+heroku apps:destroy  <my-app-name> --confirm <my-app-name>
+```
+
+
+[Table of Contents](#table-of-contents)
 
 
 ## Future Considerations
+- Using multiple datafiles
+- Connecting to APIs
+- More complex / robust **wrangle_script.py** file
+- Different Bootstrap template
+- Make the page more interactive
+- Add more pages
+- What else can Flask offer?
+
+
 [Table of Contents](#table-of-contents)
