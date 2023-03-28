@@ -61,8 +61,15 @@ Visually, we can examine the directory trees for the files and folders created
 for each phase.
 
 **Before**
+
 ![Directory Tree Level 1](Images/directory_tree1.png)
-    
+
+![Directory Tree Level 2](Images/directory_tree2.png)
+
+![Directory Tree Level 3](Images/directory_tree3.png)
+
+
+**After**
 
 [Table of Contents](#table-of-contents)
 
