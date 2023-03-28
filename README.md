@@ -17,6 +17,8 @@ the Udacity environment. Both upload pathways will be detailed.
 - [Directory Tree: Before](#directory-before)
 - [Directory Tree: After](#directory-after)
 - [Before the Upload](#before-the-upload)
+- [Ubunto (Linux) Approach](#ubunto-linux)
+- [Micrsoft Git Bash Approach](#microsoft-git-bash)
 - [Ready to Upload](#ready-to-upload)
 - [Future Considerations](#future-considerations)
 
@@ -36,7 +38,9 @@ Additionally, the HTML file calls in a Bootstrap template. The Bootsrap website
 features many templates which provide a front-end framework, essentially 
 eliminating the need for CSS or Javascript.
 
+
 [Table of Contents](#table-of-contents)
+
 
 ## Project Motivation
 The initial objective was to practice creating a dashboard and uploading the
@@ -51,7 +55,9 @@ process came with their share of troubleshooting. Documenting the entire
 troubleshooting process and sharing what was found will help not only recreate
 this exact webpage, but hopefully other users finding the same issues.
 
+
 [Table of Contents](#table-of-contents)
+
 
 ## File Descriptions
 There will be three "sets" of files available in this repository:
@@ -82,6 +88,7 @@ Note that the pycache folders are automatically created.
 ![Directory Tree Level A2](Images/directory_tree5.png)
 
 ![Directory Tree Level A3](Images/directory_tree6.png)
+
 
 [Table of Contents](#table-of-contents)
 
@@ -126,7 +133,10 @@ If everything is setup properly, a URL should be created and will look like:
 http://127.0.0.1:5000/
 ```
 
-Copy and past the URL into a browswer, and this will deploy a dashboard locally.
+Copy and past the URL into a browswer, and this will deploy a dashboard locally. 
+Additionally, the terminal should display more information:
+
+![Terminal: Deploy Locally](Images/before_deploy_website.png)
 
 This is where the user can test any code or file edits before deploying to a server.
 
@@ -135,7 +145,103 @@ This is where the user can test any code or file edits before deploying to a ser
 
 
 ## Ready to Upload
+In this example, we'll be uploading the finalized webpage to a Heroku server. Moving
+forward assumes a Heroku account has been created.
+
+The initial tutorial was done on Ubunto (Linux). However, this template was ultimately
+uploaded on Windows machine using a Git Bash terminal. Regardless of the approach,
+we'll document any files altered or added.
+
+First things first, copy the files into (could use terminal commands) folder named
+**web_app**.
+
+
+## Ubunto (Linux) Approach
+1. Create Virtual Environment
+```
+conda update python
+python3 -m venv myenv
+source myenv/bin/activate
+```
+
+2. Install Packages (flask, pandas, plotly, gunicorn, any other desired)
+```
+pip install flask==0.12.5 pandas==0.23.3 plotly==2.0.15 gunicorn==19.10.0
+```
+
+3. Verify Heroku Installation
+```
+heroku --version
+```
+This will result in an error if Heroku is not installed.
+
+4. Login to Heroku Account
+```
+heroku login -i
+```
+
+5. Make sure **app.run()** is removed the **myapp.py** file before proceeding.
+
+6. Change Directory Into The **web_app** Folder
+```
+cd \...\web_app
+```
+
+7. Create a **Procfile** Within the **web_app** folder (product presentation compact file)
+```
+touch Procfile
+```
+
+8. Alter the **Procfile**
+```python
+web gunicorn myapp:app
+```
+
+9. Create a **requirements.txt** file
+```
+pip freeze > requirements.txt
+```
+Note that this command will automatically populate the **requirements.txt** file.
+
+10. Create the Heroku App
+```
+heroku create my-app-name
+```
+- **my-app-name** must be unique
+- Optional: specifying buildpack types
+```
+heroku create my-app-name --buildpack heroku/python
+```
+
+11. Check that the Remote Repository was Created
+```
+git remote -v
+```
+
+12. Use the following environmental variables
+```
+heroku config:set SLUGIFY_USES_TEXT_UNIDECODE=yes
+heroku config:set AIRFLOW_GPL_UNIDECODE=yes
+```
+
+13. Verify Configurations
+```
+heroku config
+```
+
+14. And Finally...
+```
+git push heroku master
+```
+
+
 [Table of Contents](#table-of-contents)
+
+
+## Microsoft Git Bash Approach
+
+
+
 
 
 ## Future Considerations
