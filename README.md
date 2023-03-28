@@ -20,7 +20,6 @@ the Udacity environment. Both upload pathways will be detailed.
 
 
 ## Libraries Used
-[Table of Contents](#table-of-contents)
 Note that once the app is ready to be uploaded, a requirements.txt file will be 
 created. This file will be created in a virtual environment, trying to follow
 the practice of only containing the essentials. However, the following libraries
@@ -35,9 +34,9 @@ Additionally, the HTML file calls in a Bootstrap template. The Bootsrap website
 features many templates which provide a front-end framework, essentially 
 eliminating the need for CSS or Javascript.
 
+[Table of Contents](#table-of-contents)
 
 ## Project Motivation
-[Table of Contents](#table-of-contents)
 The initial objective was to practice creating a dashboard and uploading the
 dashboard to a server where others could reach it like any other website.
 
@@ -50,10 +49,9 @@ process came with their share of troubleshooting. Documenting the entire
 troubleshooting process and sharing what was found will help not only recreate
 this exact webpage, but hopefully other users finding the same issues.
 
-
-## File Descriptions
 [Table of Contents](#table-of-contents)
 
+## File Descriptions
 Main Folder Directory:
 - data (folder)
     - any data files used (data.csv)
@@ -77,7 +75,7 @@ Before The Upload
 - 
     
 
-
+[Table of Contents](#table-of-contents)
 
 ## Before The Upload
 [Table of Contents](#table-of-contents)
