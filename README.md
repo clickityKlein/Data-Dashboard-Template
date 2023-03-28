@@ -21,14 +21,14 @@ the Udacity environment. Both upload pathways will be detailed.
 
 ## Libraries Used
 Note that once the app is ready to be uploaded, a requirements.txt file will be 
-created. This file will be created in a virtual environment, trying to follow
-the practice of only containing the essentials. However, the following libraries
-are paramount to this template construction prior to a server upload.
+created. This file will be created in a virtual environment, a common recommendation. 
+However, the following libraries are paramount to this template construction prior to 
+a server upload.
 
-Flask
-Numpy
-Pandas
-Plotly
+- Flask
+- Numpy
+- Pandas
+- Plotly
 
 Additionally, the HTML file calls in a Bootstrap template. The Bootsrap website
 features many templates which provide a front-end framework, essentially 
@@ -38,9 +38,9 @@ eliminating the need for CSS or Javascript.
 
 ## Project Motivation
 The initial objective was to practice creating a dashboard and uploading the
-dashboard to a server where others could reach it like any other website.
+dashboard to a server to be reached like any other website.
 
-However, the initial task supplied the following two opportunities:
+However, the initial exercise supplied the following two opportunities:
 1. Create a dashboard template that is quick to duplicate for multiple uses.
 2. Create a detailed account of template creation and the upload process.
 
@@ -52,27 +52,16 @@ this exact webpage, but hopefully other users finding the same issues.
 [Table of Contents](#table-of-contents)
 
 ## File Descriptions
-Main Folder Directory:
-- data (folder)
-    - any data files used (data.csv)
-- myapp (folder)
-    - __pycache__ (automatically generated folder and files)
-    - static/img (folder)
-        - any images used (image.png, image.jpg, etc.)
-    - templates (folder)
-        - index.html
-    - __init__.py
-    - routes.py
-- wrangling_scripts (folder)
-    - __pycache__ (automatically generated folder and files)
-    - wrangle_data.py
-- myapp.py
+There will be three "sets" of files available in this repository:
+1. Before the upload to a server
+2. After the upload to a server
+3. Supporting files and images for this repository and README
 
+Visually, we can examine the directory trees for the files and folders created 
+for each phase.
 
-Before The Upload
-- index.html: the main code behind the webpage
-- __init__.py: initiates Flask
-- 
+**Before**
+![Directory Tree Level 1](https://github.com/[clickityKlein]/[Data-Dashboard-Template]/blob/[Images]/directory_tree1)
     
 
 [Table of Contents](#table-of-contents)
