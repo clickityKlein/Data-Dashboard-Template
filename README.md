@@ -61,7 +61,7 @@ Visually, we can examine the directory trees for the files and folders created
 for each phase.
 
 **Before**
-![Directory Tree Level 1](https://github.com/[clickityKlein]/[Data-Dashboard-Template]/blob/[Images]/directory_tree1)
+![Directory Tree Level 1](https://github.com/[clickityKlein]/[Data-Dashboard-Template]/blob/[Images]/directory_tree1.png?raw=true)
     
 
 [Table of Contents](#table-of-contents)
