@@ -115,6 +115,22 @@ app.run()
 The **app.run()** portion of the code is a necessary method to deploy the
 application locally.
 
+Once it's time to test the webpage (deploy locally), in a terminal, type the 
+following command:
+```
+python myapp.py
+```
+
+If everything is setup properly, a URL should be created and will look like:
+```
+http://127.0.0.1:5000/
+```
+
+Copy and past the URL into a browswer, and this will deploy a dashboard locally.
+
+This is where the user can test any code or file edits before deploying to a server.
+
+
 [Table of Contents](#table-of-contents)
 
 
