@@ -55,8 +55,8 @@ this exact webpage, but hopefully other users finding the same issues.
 
 ## File Descriptions
 There will be three "sets" of files available in this repository:
-1. Before the upload to a server
-2. After the upload to a server
+1. Before the upload to a server phase
+2. After the upload to a server phase
 3. Supporting files and images for this repository and README
 
 Visually, it'll help to examine the directory trees for the files and folders created 
@@ -65,27 +65,56 @@ hopefully these maps will help.
 
 Note that the pycache folders are automatically created.
 
+
 ## Directory Tree: Before
 
-![Directory Tree Level 1](Images/directory_tree1.png)
+![Directory Tree Level B1](Images/directory_tree1.png)
 
-![Directory Tree Level 2](Images/directory_tree2.png)
+![Directory Tree Level B2](Images/directory_tree2.png)
 
-![Directory Tree Level 3](Images/directory_tree3.png)
+![Directory Tree Level B3](Images/directory_tree3.png)
 
 
 ## Directory Tree: After
 
-![Directory Tree Level 1](Images/directory_tree4.png)
+![Directory Tree Level A1](Images/directory_tree4.png)
 
-![Directory Tree Level 2](Images/directory_tree5.png)
+![Directory Tree Level A2](Images/directory_tree5.png)
 
-![Directory Tree Level 3](Images/directory_tree6.png)
-
+![Directory Tree Level A3](Images/directory_tree6.png)
 
 [Table of Contents](#table-of-contents)
 
 ## Before The Upload
+Referring to first of six images above, there will be 3 main folders and 1 main python file.
+
+- The **data** folder contains any csv files
+- The **myapp** folder contains 2 main folders, **static** and **templates**, and 
+2 main files, **\_\_init\_\_.py** and **routes.py**
+- The **\_\_init\_\_.py** file imports Flask
+- The **routes.py** file tells the webpage how to use and render the 
+**wrangle_data.py** file (see below)
+- The **static** folder contains the **img** folder, which contains any images used
+- The **templates** folder contains the webpage itself, **index.html**
+- The **index.html** is the webpage design
+- The **wrangling_scripts** folder contains a python file called **wrangle_data.py**
+- The **wrangle_data.py** file is used to import, clean and plot data
+- The **myapp.py** file will allow a terminal to access the flask app, deploying a
+development server into a web browswer (only accessible to the user)
+
+These notes won't dive too deep into the other python files, but it's important to
+draw attention to the **myapp.py** file.
+
+**myapp.py**
+```python
+# simple script to run the web application
+from myapp import app
+app.run()
+```
+
+The **app.run()** portion of the code is a necessary method to deploy the
+application locally.
+
 [Table of Contents](#table-of-contents)
 
 
