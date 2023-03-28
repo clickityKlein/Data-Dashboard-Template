@@ -1,5 +1,5 @@
 # Data Dashboard Template
-This [template](https://dashboard.heroku.com/apps/carlklein-dashboard-template) lays the foundation for creating a dashboard that can be uploaded
+This [template](http://carlklein-dashboard-template.herokuapp.com/) lays the foundation for creating a dashboard that can be uploaded
 to a webpage using basic HTML, Flask, Plotly, and Bootstrap.
 
 Discussed below (in this README), are the basics of this template and 
@@ -346,7 +346,7 @@ heroku apps:destroy  <my-app-name> --confirm <my-app-name>
 
 ## Future Considerations
 
-Firstly, the created webpage can be found [here.](https://dashboard.heroku.com/apps/carlklein-dashboard-template)
+Firstly, the created webpage can be found [here.](http://carlklein-dashboard-template.herokuapp.com/)
 
 - Using multiple datafiles
 - Connecting to APIs
