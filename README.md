@@ -316,7 +316,7 @@ Quite the before and after! What exactly changed:
 - Removed **run_app()** from **myapp.py** file
 - Added **Procfile**
 - Added **requirements.txt** file
-- In the case of the Microsoft Git Bash approach, added **runtime.txt** file
+- In the case of the Microsoft Git Bash approach, added **runtime.txt** file (see below)
 
 When using Microsoft Git Bash, the user may need to login to Heroku once 
 in the Windows Command Prompt if the terminal is suggesting Heroku is not installed.
@@ -324,6 +324,14 @@ Hence, when checking:
 ```
 heroku -version
 ```
+
+If there are persistent errors with version types, specifically Python version,
+add a **runtime.txt** file. Buildpacks can be out of range for the user's Python 
+version.
+```python
+python-3.9.16
+```
+ 
 
 Due to the nature of the uploaded server requiring a unique name (remember back to 
 **my-app-name**), it may seem permanent if a mistake is made along the way. However,
