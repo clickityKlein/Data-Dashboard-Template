@@ -57,8 +57,11 @@ There will be three "sets" of files available in this repository:
 2. After the upload to a server
 3. Supporting files and images for this repository and README
 
-Visually, we can examine the directory trees for the files and folders created 
-for each phase.
+Visually, it'll help to examine the directory trees for the files and folders created 
+for each phase. The files and folders locations and nomenclature can be confusing, so 
+hopefully these maps will help.
+
+Note that the pycache folders are automatically created.
 
 **Before**
 
@@ -70,6 +73,13 @@ for each phase.
 
 
 **After**
+
+![Directory Tree Level 1](Images/directory_tree4.png)
+
+![Directory Tree Level 2](Images/directory_tree5.png)
+
+![Directory Tree Level 3](Images/directory_tree6.png)
+
 
 [Table of Contents](#table-of-contents)
 
