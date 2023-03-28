@@ -14,6 +14,8 @@ the Udacity environment. Both upload pathways will be detailed.
 - [Libraries Used](#libraries-used)
 - [Project Motivation](#project-motivation)
 - [File Descriptions](#file-descriptions)
+- [Directory Tree: Before](#directory-before)
+- [Directory Tree: After](#directory-after)
 - [Before the Upload](#before-the-upload)
 - [Ready to Upload](#ready-to-upload)
 - [Future Considerations](#future-considerations)
@@ -63,7 +65,7 @@ hopefully these maps will help.
 
 Note that the pycache folders are automatically created.
 
-**Before**
+## Directory Tree: Before
 
 ![Directory Tree Level 1](Images/directory_tree1.png)
 
@@ -72,7 +74,7 @@ Note that the pycache folders are automatically created.
 ![Directory Tree Level 3](Images/directory_tree3.png)
 
 
-**After**
+## Directory Tree: After
 
 ![Directory Tree Level 1](Images/directory_tree4.png)
 
