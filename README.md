@@ -332,13 +332,16 @@ version.
 python-3.9.16
 ```
  
-
 Due to the nature of the uploaded server requiring a unique name (remember back to 
 **my-app-name**), it may seem permanent if a mistake is made along the way. However,
 don't fret. To delete an app:
 ```
 heroku apps:destroy  <my-app-name> --confirm <my-app-name>
 ```
+
+Not explicitly mentioned in either method (actually assuming it'll be deleted in 
+the Git Bash method), but when it comes to removing **run_app()**, this can be 
+done as soon as the files are copied over into the **web_app** main folder.
 
 
 [Table of Contents](#table-of-contents)
